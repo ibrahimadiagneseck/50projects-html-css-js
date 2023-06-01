@@ -14,7 +14,7 @@ body {
 
 .container {
   background-color: #fafafa;
-  transform-origin: top left;
+  transform-origin: top left; /* pour la rotation */
   transition: transform 0.5s linear;
   width: 100vw;
   min-height: 100vh;

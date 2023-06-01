@@ -1,6 +1,8 @@
 const progress = document.getElementById('progress')
+
 const prev = document.getElementById('prev')
 const next = document.getElementById('next')
+
 const circles = document.querySelectorAll('.circle')
 
 let currentActive = 1
@@ -26,6 +28,7 @@ prev.addEventListener('click', () => {
 })
 
 function update() {
+
     circles.forEach((circle, idx) => {
         if(idx < currentActive) {
             circle.classList.add('active')
@@ -35,6 +38,8 @@ function update() {
     })
 
     const actives = document.querySelectorAll('.active')
+
+    // console.log(actives.length, circles.length); // (1, 4) (2, 4) (3, 4) (4, 4)
 
     progress.style.width = (actives.length - 1) / (circles.length - 1) * 100 + '%'
 
